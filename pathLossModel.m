@@ -103,7 +103,7 @@ if nargout==0
     hold on;
     mu=mean(chi_sigma);
     x=h.BinEdges;
-    y=normpdf(x,mu,sigma);
+    y = (   1/(sigma*sqrt(2*pi))   )  *  exp(-0.5*((x-mu)/sigma).^2  );
     plot (x,y)
         
     grid on;
